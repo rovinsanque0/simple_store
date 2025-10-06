@@ -4,4 +4,7 @@
 <p><strong>Price:</strong> $<%= @product.price %></p>
 <p><strong>Stock Quantity:</strong> <%= @product.stock_quantity %></p>
 
+<p><strong>Category:</strong> <%= @product.category.name if @product.category %></p>
+
+
 <p><a href="/products">← Back to All Products</a></p>

@@ -7,15 +7,17 @@
       <th>Description</th>
       <th>Price</th>
       <th>Stock Quantity</th>
+       <th>Category</th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= link_to product.title, product_path(product) %></td> <%# created a clickable link to show individual pages %>
+        <td><%= link_to product.title, product_path(product) %></td> <!-- created a clickable link to show individual pages -->
         <td><%= product.description %></td>
         <td>$<%= product.price %></td>
         <td><%= product.stock_quantity %></td>
+        <td><%= product.category.name if product.category %></td> <!-- Display category name if it exists ->
       </tr>
     <% end %>
   </tbody>
