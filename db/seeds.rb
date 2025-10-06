@@ -47,10 +47,10 @@ CSV.foreach(csv_path, headers: true) do |row|
   category = Category.find_or_create_by(name: category_name)
 
   Product.create!(
-    title: row["title"],
+    title: row["name"],
     description: row["description"],
     price: row["price"],
-    stock_quantity: row["stock_quantity"],
+    stock_quantity: row["stock quantity"],
     category: category
   )
 end
