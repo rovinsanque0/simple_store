@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   # 
   
-  get "/products", to: "products#index"
+  resources :products, only: [:index, :show]
+
 
 end
